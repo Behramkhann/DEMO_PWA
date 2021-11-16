@@ -1,0 +1,18 @@
+<!-- Page Content -->
+<!-- Items Starts Here -->
+
+<div class="featured container no-gutter">
+  <div class="row posts">
+    <div class="item new col-md-4" *ngFor="let product of products">
+      <a [routerLink]="['/product', product.id]" (click)="onProduct()">
+        <div class="featured-item">
+          <img src="{{ product.image }}" alt="" />
+          <h4>{{ product.name }}</h4>
+          <h6>{{ product.price }}</h6>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Featred Page Ends Here -->
